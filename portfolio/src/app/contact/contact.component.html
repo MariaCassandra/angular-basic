@@ -1,0 +1,71 @@
+<section id="contact" class="contact">
+    <div class="container" data-aos="fade-up">
+
+      <div class="section-title mt-4">
+        <br> <br>
+        <h2>If you want to work together, have an idea or simply want to say hello, then contact me:</h2>
+        <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+      </div>
+
+      <div>
+        <iframe style="border:0; width: 100%; height: 270px;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d777.7005045878248!2d2.1594959471747615!3d41.389549140890175!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4a28de087acb1%3A0xa0ab51b00c07ce5e!2sCarrer%20d&#39;Enric%20Granados%2C%2020%2C%2008007%20Barcelona!5e0!3m2!1sfi!2ses!4v1623162312017!5m2!1sfi!2ses" frameborder="0" allowfullscreen></iframe>
+      </div>
+
+      <div class="row mt-5">
+
+        <div class="col-lg-4">
+          <div class="info">
+            <div class="address">
+              <i class="icofont-google-map"></i>
+              <h4>Location:</h4>
+              <p>Carrer d'Enric Granados, 20, 08007 Barcelona</p>
+            </div>
+
+            <div class="email">
+              <i class="icofont-envelope"></i>
+              <h4>Email:</h4>
+              <p>maria.cassandra@gmail.com</p>
+            </div>
+
+            <div class="phone">
+              <i class="icofont-skype"></i>
+              <h4>Call:</h4>
+              <p>See my Skype contact details</p>
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="col-lg-8 mt-5 mt-lg-0">
+           
+          <form class="needs-validation" novalidate [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+            <div class="form-row">
+              <div class="col-md-6 form-group">
+                <input formControlName="name" type="text" class="form-control" id="name" placeholder="Your Name" [class.is-invalid]="nameNotValid"/>
+                <span class="text-danger" *ngIf="nameNotValid">This field is required</span>
+              </div>
+
+              <div class="col-md-6 form-group">
+                <input formControlName="email" type="email" class="form-control mt-2" id="email" placeholder="Your Email" [class.is-invalid]="emailNotValid"/>
+                <span class="text-danger" *ngIf="emailNotValid">This field is required</span>
+              </div>
+            </div>
+
+            <div class="form-group">              
+              <input formControlName="subject" type="text" class="form-control mt-2" id="subject" placeholder="Subject" [class.is-invalid]="subjectNotValid"/>
+              <span class="text-danger"  *ngIf="subjectNotValid"
+              >This field is required</span>
+            </div>
+            <div class="form-group">
+              <textarea formControlName="message" class="form-control  mt-2" rows="5" placeholder="Message" [class.is-invalid]="messageNotValid"></textarea>
+              <span class="text-danger" *ngIf="messageNotValid">This field is required</span>
+            </div>          
+            <div class="text-center mt-4 mb-4">
+              <button type="submit" [disabled]="contactForm.invalid">Send Message</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
