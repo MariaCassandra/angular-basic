@@ -3,7 +3,8 @@
 <a href="index.html" class="logo"><img src="assets/img/rgxjwI01.svg" alt="" class="img-fluid"></a>
     <h1 class="logo me-auto me-lg-0"><a href="index.html">Maria Cassandra</a></h1>
     <nav id="navbar" class="navbar order-last order-lg-0">
-        
+       <button type="button" class="mobile-nav-toggle d-lg-none" data-toggle="collapse"
+        data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation" (click)="collapsed = !this.collapsed"><i class="icofont-navigation-menu"></i></button>
           <ul>
             <li>
                 <a [routerLink]="['/']" class="nav-link" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{ exact: true }"><i class="bx "></i> <span>Home</span></a>
@@ -17,7 +18,7 @@
                                 <a [routerLink]="['/portfolio']" class="nav-link" [routerLinkActive]="'active'"><i class="bx"></i> <span>Portfolio</span></a></li>
                                   <li><a [routerLink]="['/contact']" class="nav-link" [routerLinkActive]="'active'"><i class="bx"></i> <span>Contact</span></a><li>
             </ul>
-            <i class="bi bi-list mobile-nav-toggle"></i>
+            
         </nav>
         <div class="header-social-links">
           <a href="https://github.com/mariacassandra" class="github"><i class="icofont-github"></i></a>
