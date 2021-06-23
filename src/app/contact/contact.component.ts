@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { HttpClient } from '@angular/common/http';
+
 
 
 @Component({
@@ -19,7 +19,7 @@ export class ContactComponent implements OnInit {
     message: new FormControl('', [ Validators.required, Validators.minLength(10), Validators.maxLength(100) ]),
   });
 
-  constructor(private http: HttpClient) { }
+  constructor() { }
 
   ngOnInit(): void {}
 

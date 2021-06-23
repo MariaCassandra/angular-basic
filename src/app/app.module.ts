@@ -1,40 +1,33 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule, Meta } from '@angular/platform-browser';
+import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
-
 import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
-import { ResumeComponent } from './resume/resume.component';
-import { SkillsComponent } from './skills/skills.component';
-import { PortfolioComponent } from './portfolio/portfolio.component';
 import { ContactComponent } from './contact/contact.component';
-import { FooterComponent } from './footer/footer.component';
-import { PortfolioDetailsComponent } from './portfolio-details/portfolio-details.component';
+import { ResumeComponent } from './resume/resume.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
+    FooterComponent,
     HomeComponent,
     AboutComponent,
-    ResumeComponent,
-    SkillsComponent,
-    PortfolioComponent,
     ContactComponent,
-    FooterComponent,
-    PortfolioDetailsComponent
+    ResumeComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule,
-    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
-  providers: [Meta],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
